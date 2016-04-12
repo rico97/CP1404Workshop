@@ -5,9 +5,11 @@ MAX_DECREASE=0.05
 MIN_PRICE=0.01
 MAX_PRICE=100.0
 INITIAL_PRICE=10.0
-
+def convert(price):
+    converted= (("${:,.2f}".format(price)))
+    return converted
 price = INITIAL_PRICE
-print("Starting price: ${:,.2f}".format(price))
+print("Starting price:",convert(price))
 day=0
 while price >= MIN_PRICE and price <= MAX_PRICE:
     priceChange = 0
@@ -17,4 +19,4 @@ while price >= MIN_PRICE and price <= MAX_PRICE:
         priceChange = random.uniform(--MAX_DECREASE,0)
     day+=1
     price *= (1 + priceChange)
-    print("On day {} price is: ${:,.2f}".format(day,price))
+    print("On day {} price is:".format(day),convert(price))
