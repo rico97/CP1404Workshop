@@ -5,9 +5,12 @@ MAX_DECREASE=0.05
 MIN_PRICE=0.01
 MAX_PRICE=100.0
 INITIAL_PRICE=10.0
+
+
 def convert(price):
-    converted= (("${:,.2f}".format(price)))
+    converted=("${:,.2f}".format(price))
     return converted
+
 price = INITIAL_PRICE
 print("Starting price:",convert(price))
 day=0
